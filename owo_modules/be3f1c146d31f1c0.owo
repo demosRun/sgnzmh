@@ -1,0 +1,113 @@
+<template>
+  <div class="LbWMGSGs">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card" :for="data._swiperList">
+          <div class="swiper-item" onclick="changeItem(this)">
+            <img src="{value.image}"/>
+            <div class="image-title">{value.title}</div>
+            <video width="710" height="400" style="display:none;" src="http://flv3.people.com.cn/dev1/mvideo/vodfiles/2022/06/16/b1a7bc352cfbf5695935cd84e26de830_c.mp4" controls>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="@|left.png|" class="swiper-button swiper-button-next" o-tap="swiperNext"/>
+    <img src="@|left.png|" class="swiper-button swiper-button-prev" o-tap="swiperPrev"/>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      const cont = this.$el.getElementsByClassName('swiper-container')[0]
+      this.data.swiper = new Swiper(cont, {"slidesPerView":3})
+    },
+    data: {
+      swiper: null,
+      _swiperList: [
+        {"image":"https://cunchu.site/upload/de11264d737d7ae2.jpeg","title":"中国冰雕亮相莫斯科"},
+        {"image":"https://cunchu.site/upload/de11264d737d7ae2.jpeg","title":"云南星云湖开湖捕鱼忙"},
+        {"image":"https://cunchu.site/upload/de11264d737d7ae2.jpeg","title":"探访新中国首个名人纪念馆上海鲁迅纪念馆"},
+        {"image":"https://cunchu.site/upload/de11264d737d7ae2.jpeg","title":"呼伦贝尔：燃情雪橇激情冬日"},
+        {"image":"https://cunchu.site/upload/de11264d737d7ae2.jpeg","title":"连云港：“海上菜园”收割忙"}
+      ]
+    },
+    swiperNext: function () {
+      // console.log('swiperNext')
+      this.data.swiper.swipeNext()
+    },
+    swiperPrev: function () {
+      // console.log('swiperPrev')
+      this.data.swiper.swipePrev()
+    }
+  }
+</script>
+
+<style lang="less">
+  .LbWMGSGs {
+    height: 130px;
+    width: 750px;
+    position: relative;
+    .swiper-container {
+      height: 130px;
+      width: 720px;
+      position: relative;
+      .swiper-item {
+        width: 230px;
+        height: 130px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .LbWMGSGs {
+    position: relative;
+    .swiper-button {
+      height: 30px;
+      position: absolute;
+      top: 0;
+      bottom: 0px;
+      margin: auto;
+      cursor: pointer;
+      z-index: 999;
+    }
+    .swiper-button-next {
+      right: 25px;
+      transform: rotate(180deg);
+    }
+    .swiper-button-prev {
+      left: 25px;
+    }
+  }
+  .swiper-item {
+    cursor: pointer;
+    img {
+      width: 230px;
+      height: 130px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .image-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    width: 230px;
+    margin: 0 auto;
+  }
+  .swiper-slide {
+    position: relative;
+  }
+</style>

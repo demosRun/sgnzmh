@@ -1,0 +1,236 @@
+<template lang="pug">
+.page-1
+  img.top(src="@|top.jpg|")
+  .cent-box
+    img.cent-img(src="@|cent.jpg|")
+    p 人人都是美好生活奋斗者，正值2022年毕业季，首届千禧年毕业生将正式迈入社会，人民网联合金沙酒业共同发起“时光酿造美好—美好生活奋斗者·美好毕业季”主题活动，特邀知名人像摄影师肖全通过镜头记录100张千禧毕业生青春面孔，通过时光对话、主题短片、千岗万人招聘行动等内容，以不同形式、不同视角展现当代青年奋斗姿态，共同展望美好未来。
+  plug(_name="module31" _src="http://lamp.run:8082/c24bc89b17653863.owo")
+  .ztdp
+    video.show-video(width="710" height="400" controls)
+    img.hxsp(src="@|hxsp.png|")
+    plug(_name="module4" _src="http://lamp.run:8082/be3f1c146d31f1c0.owo")
+    .qxbys
+      plug(_name="module181" _src="http://lamp.run:8082/853a721d6ccdeb0d.owo")
+      .more-box
+        a(href="#")
+          img.hxsp(src="@|more.png|")
+    .more-box
+      img.zxd(src="@|zxd.png|")
+    p.info 欢迎首届千禧毕业生们，正式踏上自己的职业旅程，金沙酒业一直十分关注大家的就业问题，特联合生态链上下游XXX家企业，面向毕业生们共同释放了XXXX个岗位需求，遍布全国XX座城市，期待你们的加入！
+    ul.info-url
+      li
+        span.le 贵州金沙窖酒酒业有限公司
+        span.se 研究员
+        span.ri 贵州
+      li
+        span.le 贵州金沙窖酒酒业有限公司
+        span.se 研究员
+        span.ri 贵州
+      li
+        span.le 贵州金沙窖酒酒业有限公司
+        span.se 研究员
+        span.ri 贵州
+      li
+        span.le 贵州金沙窖酒酒业有限公司
+        span.se 研究员
+        span.ri 贵州
+      li
+        span.le 贵州金沙窖酒酒业有限公司
+        span.se 研究员
+        span.ri 贵州
+      li
+        span.le 贵州金沙窖酒酒业有限公司
+        span.se 研究员
+        span.ri 贵州
+      li
+        span.le 贵州金沙窖酒酒业有限公司
+        span.se 研究员
+        span.ri 贵州
+    .more-box
+      a(href="#")
+        img.hxsp(src="@|more.png|")
+    //- 活动
+    .more-box
+      img.hxsp(src="@|hd.png|" onclick="document.querySelector('.more-info').style.display = 'block'")
+      img.more-info(src="@|more-info.png|" style="display:none;" onclick="document.querySelector('.more-info').style.display = 'none'")
+    .jcbd
+      .tab-box.clear
+        img.fl(src="@|show-2.png|")
+        ul.fr
+          li(onclick="showjcdb(this)")
+            span 肖全镜头下的千禧毕业生
+            img(src="@|show-2.png|")
+          li(onclick="showjcdb(this)")
+            span 优秀毕业生故事
+            img(src="@|show-2.png|")
+          li(onclick="showjcdb(this)")
+            span 罗翔答千禧毕业生学生问
+            img(src="@|show-2.png|")
+      .more-box
+        img.mtbd(src="@|mtbd.png|")
+      .news-list
+        ul
+          li.clear
+            a(href="#")
+              img.fl(src="@|show-2.png|" width="175" height="105")
+              p.fl 金沙酒业组织召开工程建设专题会
+          li.clear
+            a(href="#")
+              img.fl(src="@|show-2.png|" width="175" height="105")
+              p.fl 金沙酒业组织召开工程建设专题会金沙酒业组织召开工程建设专题会金沙酒业组织召开工程建设专题会金沙酒业组织召开工程建设专题会
+          li.clear
+            a(href="#")
+              img.fl(src="@|show-2.png|" width="175" height="105")
+              p.fl 金沙酒业组织召开工程建设专题会
+          li.clear
+            a(href="#")
+              img.fl(src="@|show-2.png|" width="175" height="105")
+              p.fl 金沙酒业组织召开工程建设专题会
+          li.clear
+            a(href="#")
+              img.fl(src="@|show-2.png|" width="175" height="105")
+              p.fl 金沙酒业组织召开工程建设专题会
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+.top {
+  display: block;
+}
+.cent-box {
+  position: relative;
+  img {
+    display: block;
+  }
+  p {
+    position: absolute;
+    top: 40px;
+    color: white;
+    font-size: 24px;
+    line-height: 38px;
+    width: 530px;
+    left: 170px;
+    text-indent: 2em;
+  }
+}
+.ztdp {
+  background-image: url('@|ztdp.jpg|');
+  padding-top: 280px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  video {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.hxsp {
+  display: block;
+  margin: 25px auto;
+}
+.qxbys {
+  background-image: url('@|qxbys.png|');
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-top: 60px;
+}
+.more-box {
+  margin-bottom: 20px;
+  position: relative;
+  a, img {
+    display: block;
+  }
+}
+.info {
+  color: #202020;
+  font-size: 22px;
+  line-height: 36px;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.info-url {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  line-height: 46px;
+  font-size: 24px;
+  li {
+    border-bottom: 1px dashed #ccc;
+    span {
+      display: inline-block;
+    }
+    .le {
+      width: 420px;
+    }
+    .se {
+      width: 165px;
+    }
+  }
+}
+.more-info {
+  position: absolute;
+  bottom: 20px;
+  right: 95px;
+}
+.jcbd {
+  background-image: url('@|jcbd.png|');
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-top: 60px;
+  padding-top: 160px;
+}
+.tab-box {
+  margin-bottom: 40px;
+  ul {
+    width: 322px;
+    background-color: #f2d9c8;
+    img {
+      display: none;
+    }
+    li {
+      padding: 22px;
+      font-size: 22px;
+      color: #c9380f;
+      font-weight: bold;
+      height: 51px;
+      
+    }
+    .active {
+      background-color: #ca431c;
+      color: white;
+    }
+  }
+}
+.news-list {
+  width: 700px;
+  margin: 0 auto;
+  ul {
+    height: 490px;
+    overflow: auto;
+  }
+  li {
+    margin-bottom: 20px;
+    a {
+      display: block;
+    }
+    img {
+      margin-right: 20px;
+    }
+    p {
+      color: #333333;
+      font-size: 24px;
+      margin-top: 12px;
+      width: 475px;
+      line-height: 28px;
+    }
+  }
+}
+</style>
